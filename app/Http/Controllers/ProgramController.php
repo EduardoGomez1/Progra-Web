@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Student;
 use Illuminate\Http\Request;
 
-class StudentController extends Controller
+class ProgramController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -35,15 +34,7 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
-        $student = Student::create([
-            'name' => $request->name,
-            'last_name' => $request->LastName,
-            'semester' => 9,
-            'email' =>'mailita@ita.mx',
-            'control' => 9999,
-            'program_id' => 1,
-        ]);
-        echo $request->name;
+        //
     }
 
     /**
@@ -89,10 +80,5 @@ class StudentController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    public function create_token()
-    {
-        return csrf_token();
     }
 }
